@@ -1,22 +1,22 @@
 {
-  "name": "awesome_books",
+  "name": "awesome-books",
   "version": "1.0.0",
-  "description": "![](https://img.shields.io/badge/EngruugbeJimmy-blue) ![](https://img.shields.io/badge/fmanimashaun-green)",
+  "description": "![](https://img.shields.io/badge/yosaddis-blue) ![](https://img.shields.io/badge/fmanimashaun-green)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fmanimashaun/Awesome_books.git"
+    "url": "git+https://github.com/yosaddis/Awesome-books.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/fmanimashaun/Awesome_books/issues"
+    "url": "https://github.com/yosaddis/Awesome-books/issues"
   },
-  "homepage": "https://github.com/fmanimashaun/Awesome_books#readme",
+  "homepage": "https://github.com/yosaddis/Awesome-books#readme",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "eslint": "^7.32.0",
