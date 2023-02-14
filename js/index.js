@@ -13,27 +13,17 @@ function addBook(title, author) {
     title,
     author,
   });
-  // listBooks();
+   listBooks();
 }
 
 function removeBook(id) {
   books = books.filter((book) => book.id !== String(id));
-  // listBooks();
+   listBooks();
 }
 
 function listBooks() {
   for (let i = 0; i < books.length; i += 1) {
-    console.log(books[i]);
+// HTML implementation here
   }
 }
 
-listBooks();
-console.log('===========================');
-addBook('Test2', 'Many author');
-addBook('Test3', 'Many author');
-console.log('===========================');
-listBooks();
-console.log('===========================');
-removeBook(books[0].id);
-listBooks();
-console.log('===========================');
