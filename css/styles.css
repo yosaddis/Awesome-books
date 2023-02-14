@@ -49,4 +49,3 @@ body {
 .container > :last-child:not(main) {
   margin-block: 2rem 0;
 }
-
