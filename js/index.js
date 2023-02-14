@@ -15,12 +15,12 @@ function addBook(title,author){
 			title,
 			author, 
 	});
-	listBooks();
+	//listBooks();
 }
 
 function removeBook(id) {
 	books = books.filter((book) => book.id !== String(id));
-	listBooks();
+	//listBooks();
 }
 
 function listBooks() {
