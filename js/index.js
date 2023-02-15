@@ -1,6 +1,34 @@
 // render books
 const renderBooks = () => {
-	
+	// Get DOM elements'
+	const bookList = document.querySelector('.books__list');
+
+	// get the books from the books array from localStorage
+	const booksCollection = localStorage.getItem('books') ? JSON.parse(localStorage.getItem('books')) : [];
+	// check the length of the books array
+
+	if (booksCollection.length === 0) {
+		// clear the list
+		bookList.innerHTML = '';
+
+		// update the DOM with no books message
+		bookList.innerHTML = '<p class="books__list-item">No books to show</p>';
+	} else {
+		// loop through the books array
+		const bookshtml = booksCollection.map((book) => `
+      <div class="books__list-item">
+        <p class="books__list-item-title">${book.title}</p>
+        <p class="books__list-item-author">${book.author}</p>
+        <button class="books__list-item-delete" data-id="${book.id}">Delete</button>
+      </div>
+    `).join('');
+
+		// clear the list
+		bookList.innerHTML = '';
+
+		// update the DOM with the new list
+		bookList.insertAdjacentHTML('afterbegin', bookshtml);
+	}
 };
 
 // add a book function
