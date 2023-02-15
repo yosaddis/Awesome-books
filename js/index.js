@@ -56,3 +56,10 @@ const removeBook = (id) => {
 	// call the renderBooks function
 	renderBooks();
 };
+
+
+// render  books on the page when page loads
+window.addEventListener('DOMContentLoaded', () => {
+	// call the renderBooks function when the page loads
+	renderBooks();
+});
