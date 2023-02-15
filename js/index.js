@@ -63,3 +63,34 @@ window.addEventListener('DOMContentLoaded', () => {
 	// call the renderBooks function when the page loads
 	renderBooks();
 });
+
+// add event listener to the page
+document.addEventListener('click', (e) => {
+	if (e.target.dataset.input === 'submit') {
+		// Get DOM elements
+		const form = document.querySelector('.books__addbook-form');
+
+		// check form validity
+		if (form.checkValidity()) {
+			// prevent the default behaviour
+			e.preventDefault();
+
+			// get the values from the form
+			const formData = new FormData(form);
+			const title = formData.get('title');
+			const author = formData.get('author');
+			const id = Math.random().toString(36).substring(2, 9);
+
+			const newBook = { id, title, author };
+
+			// call the addBook function
+			addBook(newBook);
+
+			// clear form
+			form.reset();
+		}
+	} else if (e.target.dataset.id) {
+		// call the removeBook function
+		removeBook(e.target.dataset.id);
+	}
+});
