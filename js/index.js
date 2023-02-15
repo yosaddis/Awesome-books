@@ -17,7 +17,7 @@ const renderBooks = () => {
     // loop through the books array
     const bookshtml = booksCollection.map((book) => `
       <div class="books__list-item">
-        <h2 class="books__list-item-title">${book.title}</h2>
+        <p class="books__list-item-title">${book.title}</p>
         <p class="books__list-item-author">${book.author}</p>
         <button class="books__list-item-delete" data-id="${book.id}">Delete</button>
       </div>
@@ -84,6 +84,9 @@ document.addEventListener('click', (e) => {
 
       // call the addBook function
       addBook(newBook);
+
+      // clear form
+      form.reset();
     }
   } else if (e.target.dataset.id) {
     // call the removeBook function
