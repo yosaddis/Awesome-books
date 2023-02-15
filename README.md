@@ -1,16 +1,36 @@
 ![](https://img.shields.io/badge/fmanimashaun-green)
 ![](https://img.shields.io/badge/yosaddis-blue)
 
-
-
 # Awesome books: plain JavaScript with objects
 
+## 📗 Table of Contents
 
-## Overview
+- [📖 Overview](#about-project)
+  - [Project Objectives](#project-objectives)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
+    - [Screenshots](#screenshots)
+- [💻 Getting Started](#getting-started)
+  - [Setup](#setup)
+  - [Prerequisites](#prerequisites)
+  - [Install](#install)
+  - [Run tests](#run-tests)
+  - [Deployment](#deployment)
+- [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
+- [📝 License](#license)
+
+
+## Overview <a name="about-project"></a>
 
 In this project, we built a basic website that allows users to add/remove books from a list. This was achieved by using JavaScript objects and arrays while using javascript DOM and basic events to dynamically modify the page.
 
-## Project Tasks List
+### Project Objectives <a name="project-objectives"></a>
 
 - [ ] Implement only a basic UI with plain HTML
 - [ ] Create a collection that keeps a list of books (hint: you can use an array of objects for that).
@@ -36,24 +56,29 @@ In this project, we built a basic website that allows users to add/remove books 
   - [ ] Contact info.
 - [ ] Create a tappy component to change page view without reloading a new file.
 
-## DEMO LINK
+## 🛠 Built With <a name="built-with"></a>
 
-> [Live Demo Link](https://yosaddis.github.io/Awesome-books/)
-
-## Screenshots
-
-<h3 align="center">Screenhot</h3>
-<p align="center">
-  <img width="200" src="#">
-  <img width="200" src="#">
-  <img width="200" src="#">
-</P>
-
-## Built With
+### Tech Stack <a name="tech-stack"></a>
 
 - [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+
+
+### Key Features <a name="key-features"></a>
+
+- [x] Preserving data with localStorage
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+> [Live Demo Link](https://yosaddis.github.io/Awesome-books/)
+
+### Screenshots <a name="screenshots"></a>
+
+<h3 align="center">Screenhot</h3>
+<p align="center">
+  <img width="200" src="#">
+</P>
 
 
 ## Getting Started
