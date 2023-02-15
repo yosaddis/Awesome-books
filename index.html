@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   <title>Awesome Books</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/styles.css">
@@ -32,19 +32,7 @@
         <div class="books__body">
 
           <!--Books list section-->
-          <div class="books__list">
-            <div class="books__list-item">
-              <h2 class="books__list-item-title">Lorem Ipsum</h2>
-              <p class="books__list-item-author">Testeroo Testyy</p>
-              <button class="books__list-item-remove">Remove</button>
-            </div>
-
-            <div class="books__list-item">
-              <h2 class="books__list-item-title">Lorem Ipsum</h2>
-              <p class="books__list-item-author">Testeroo Testyy</p>
-              <button class="books__list-item-remove">Remove</button>
-            </div>
-          </div>
+          <div class="books__list"></div>
 
           <!--Add book section-->
           <div class="books__addbook">
@@ -58,7 +46,7 @@
                 <input type="text" name='author' id='author' placeholder='Author' required>
               </label>
 
-              <input type="submit" value="Add">
+              <input type="submit" value="Add" data-input='submit'>
             </form>
           </div>
 
