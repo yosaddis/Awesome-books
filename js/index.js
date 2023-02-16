@@ -1,4 +1,5 @@
 // create a class for book collection
+
 class Books {
   constructor() {
     this.list;
