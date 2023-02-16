@@ -1,21 +1,18 @@
-// creates a class for book
-class Book {
-  constructor(title, author) {
-    this.title = title;
-    this.author = author;
-  }
-}
+// // creates a class for book
+// class Book {
+//   constructor(title, author) {
+//     this.title = title;
+//     this.author = author;
+//   }
+// }
 
 // create a class for book collection
-class bookList {
+class Books {
   constructor() {
-    if (localStorage.getItem('books')) {
-      this.list = [...JSON.parse(localStorage.getItem('bookList'))];
-    } else {
-      this.list = [];
-    }
+    this.list = localStorage.getItem('books') ? JSON.parse(localStorage.getItem('books')) : [];
+   
   }
-}
+};
 
 // render books
 const renderBooks = () => {
