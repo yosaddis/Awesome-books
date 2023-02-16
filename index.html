@@ -20,7 +20,37 @@
 
     <!-- ***********************  PAGE MAIN *********************** -->
     <main class="main">
+		<div class="books">
+			<!--Books collection heading-->
+			<div class="books__heading">
+				<h1 class="books__title">Awesome Books</h1>
+			</div>
+			
+			<!--Book collection body-->
+			<div class="books__body">
+			
+				<!--Books list section-->
+				<div class="books__list"></div>
+			
+				<!--Add book section-->
+				<div class="books__addbook">
+					<form action="#" class="books__addbook-form">
+			
+						<label class="books__addbook-label" for='title'>
+							<input type="text" name='title' id='title' placeholder='Title' required>
+						</label>
+			
+						<label class="books__addbook-label">
+							<input type="text" name='author' id='author' placeholder='Author' required>
+						</label>
+			
+						<input type="submit" value="Add" data-input='submit'>
+					</form>
+				</div>
+			
+			</div>
 
+		</div>
     </main>
 
     <!-- ***********************  PAGE FOOTER *********************** -->
