@@ -29,6 +29,7 @@ class Books {
     } else {
       // loop through the books array
       const bookshtml = booksCollection.map((book) => `
+
       <div class="books__list-item">
         <p class="books__list-item-title">${book.title}</p>
         <p class="books__list-item-author">${book.author}</p>
