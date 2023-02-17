@@ -31,7 +31,7 @@ class Books {
       const bookshtml = booksCollection.map((book) => `
 
       <div class="books__list-item">
-        <p><span class="books__list-item-title">"${book.title}</span><span class="books__list-item-author">" by ${book.author}</span></p>
+        <p class="books__list-book">"${book.title}" by ${book.author}</p>
         <button class="books__list-item-delete" data-id="${book.id}">Delete</button>
       </div>
     `).join('');
