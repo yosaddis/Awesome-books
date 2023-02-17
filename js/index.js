@@ -116,3 +116,36 @@ document.addEventListener('click', (e) => {
     books.removeBook(e.target.dataset.id);
   }
 });
+
+const showBooksSection = document.querySelector('.show-books');
+const addBooksSection = document.querySelector('.add-books');
+const contactSection = document.querySelector('.contact');
+
+function showBookListSection() {
+	addBooksSection.classList.add('hide');
+	contactSection.classList.add('hide');
+	showBooksSection.classList.remove('hide');
+	confirmationMessage.innerHTML = '';
+	cont = 1;
+}
+
+function showAddBookSection() {
+	contactSection.classList.add('hide');
+	showBooksSection.classList.add('hide');
+	addBooksSection.classList.remove('hide');
+}
+
+function showContactSection() {
+	addBooksSection.classList.add('hide');
+	showBooksSection.classList.add('hide');
+	contactSection.classList.remove('hide');
+	confirmationMessage.innerHTML = '';
+}
+
+const bookListShowBtn = document.querySelector('.book-list-show');
+const addBookShowBtn = document.querySelector('.add-book-show');
+const contactShowBtn = document.querySelector('.contact-show');
+
+bookListShowBtn.addEventListener('click', showBookListSection);
+addBookShowBtn.addEventListener('click', showAddBookSection);
+contactShowBtn.addEventListener('click', showContactSection);
