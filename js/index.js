@@ -1,66 +1,83 @@
-// render books
-const renderBooks = () => {
-  // Get DOM elements'
-  const bookList = document.querySelector('.books__list');
+// create a class for book collection
+class Books {
+  constructor() {
+    // eslint-disable-next-line no-unused-expressions
+    this.list;
+  }
 
-  // get the books from the books array from localStorage
-  const booksCollection = localStorage.getItem('books') ? JSON.parse(localStorage.getItem('books')) : [];
-  // check the length of the books array
+  // get books from local storage
+  // eslint-disable-next-line class-methods-use-this
+  get list() {
+    return localStorage.getItem('books') ? JSON.parse(localStorage.getItem('books')) : [];
+  }
 
-  if (booksCollection.length === 0) {
-    // clear the list
-    bookList.innerHTML = '';
+  // render books
+  renderBooks() {
+    // Get DOM elements'
+    const bookList = document.querySelector('.books__list');
 
-    // update the DOM with no books message
-    bookList.innerHTML = '<p class="books__list-item">No books to show</p>';
-  } else {
-    // loop through the books array
-    const bookshtml = booksCollection.map((book) => `
+    // get the books from the books array from localStorage
+    const booksCollection = this.list;
+
+    // check the length of the books array
+    if (booksCollection.length === 0) {
+      // clear the list
+      bookList.innerHTML = '';
+
+      // update the DOM with no books message
+      bookList.innerHTML = '<p class="books__list-item">No books to show</p>';
+    } else {
+      // loop through the books array
+      const bookshtml = booksCollection.map((book) => `
+
       <div class="books__list-item">
-        <p class="books__list-item-title">${book.title}</p>
-        <p class="books__list-item-author">${book.author}</p>
+        <p class="books__list-book">"${book.title}" by ${book.author}</p>
         <button class="books__list-item-delete" data-id="${book.id}">Delete</button>
       </div>
     `).join('');
 
-    // clear the list
-    bookList.innerHTML = '';
+      // clear the list
+      bookList.innerHTML = '';
 
-    // update the DOM with the new list
-    bookList.insertAdjacentHTML('afterbegin', bookshtml);
+      // update the DOM with the new list
+      bookList.insertAdjacentHTML('afterbegin', bookshtml);
+    }
   }
-};
 
-// add a book function
-const addBook = (book) => {
-  // get the books from the books array from localStorage
-  const booksCollection = localStorage.getItem('books') ? JSON.parse(localStorage.getItem('books')) : [];
-  booksCollection.push(book);
+  // add a book function
+  addBook(book) {
+    // get the books from the books array from localStorage
+    const booksCollection = localStorage.getItem('books') ? JSON.parse(localStorage.getItem('books')) : [];
+    booksCollection.push(book);
 
-  // update the books array in localStorage
-  localStorage.setItem('books', JSON.stringify(booksCollection));
+    // update the books array in localStorage
+    localStorage.setItem('books', JSON.stringify(booksCollection));
 
-  // call the renderBooks function
-  renderBooks();
-};
+    // call the renderBooks function
+    this.renderBooks();
+  }
 
-// remove a book function
-const removeBook = (id) => {
-  // get the books from the books array from localStorage
-  const booksCollection = JSON.parse(localStorage.getItem('books'));
-  const updatedBooksCollection = booksCollection.filter((book) => book.id !== id);
+  // remove a book function
+  removeBook(id) {
+    // get the books from the books array from localStorage
+    const booksCollection = JSON.parse(localStorage.getItem('books'));
+    const updatedBooksCollection = booksCollection.filter((book) => book.id !== id);
 
-  // update the books array in localStorage
-  localStorage.setItem('books', JSON.stringify(updatedBooksCollection));
+    // update the books array in localStorage
+    localStorage.setItem('books', JSON.stringify(updatedBooksCollection));
 
-  // call the renderBooks function
-  renderBooks();
-};
+    // call the renderBooks function
+    this.renderBooks();
+  }
+}
 
 // render  books on the page when page loads
 window.addEventListener('DOMContentLoaded', () => {
-  // call the renderBooks function when the page loads
-  renderBooks();
+  // create a new instance of the Books class
+  const books = new Books();
+
+  // call the renderBooks method from books class when the page loads
+  books.renderBooks();
 });
 
 // add event listener to the page
@@ -82,14 +99,20 @@ document.addEventListener('click', (e) => {
 
       const newBook = { id, title, author };
 
+      // create a new instance of the Books class
+      const books = new Books();
+
       // call the addBook function
-      addBook(newBook);
+      books.addBook(newBook);
 
       // clear form
       form.reset();
     }
   } else if (e.target.dataset.id) {
+    // create a new instance of the Books class
+    const books = new Books();
+
     // call the removeBook function
-    removeBook(e.target.dataset.id);
+    books.removeBook(e.target.dataset.id);
   }
 });
