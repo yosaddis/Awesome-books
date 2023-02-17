@@ -1,10 +1,12 @@
 // create a class for book collection
 class Books {
   constructor() {
+    // eslint-disable-next-line no-unused-expressions
     this.list;
   }
 
   // get books from local storage
+  // eslint-disable-next-line class-methods-use-this
   get list() {
     return localStorage.getItem('books') ? JSON.parse(localStorage.getItem('books')) : [];
   }
