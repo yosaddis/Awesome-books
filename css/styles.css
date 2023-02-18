@@ -228,6 +228,29 @@ body {
   box-shadow: none;
 }
 
+.books__addbook-success {
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-block: 1rem;
+  color: green;
+  animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 /* contact section styles
 ------------------------------------ */
 .books__contact-title {
