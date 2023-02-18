@@ -50,6 +50,69 @@ body {
   margin-block: 2rem 0;
 }
 
+/* header section styles
+------------------------------------ */
+.header,
+.header__wrapper,
+.header__nav-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.header > *,
+.header__wrapper > * {
+  width: 100%;
+}
+
+.header__wrapper {
+  border: 4px solid #000;
+  font-weight: bold;
+}
+
+.header__logo,
+.header__nav-list > * {
+  padding: 0.5rem 1rem;
+}
+
+.header__logo {
+  display: block;
+  border-block-end: 4px solid #000;
+}
+
+.header__nav-list > .header__nav-item {
+  flex: 1;
+  cursor: pointer;
+}
+
+.header__nav-list > .header__nav-item:hover,
+.header__nav-item.active {
+  background-color: #000;
+  color: #fff;
+}
+
+.header__nav-list > .header__nav-item:active {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Disable click event on active list item */
+.header__nav-item.active {
+  background-color: #000;
+  color: #fff;
+  pointer-events: none;
+}
+
+.header__nav-list > li + li {
+  border-inline-start: 2px solid #000;
+}
+
+.header__date {
+  text-align: right;
+}
+
 /* Book section styles ------------------------------------ */
 .books {
   display: flex;
@@ -119,7 +182,7 @@ body {
   text-align: center;
   font-size: 30px;
   line-height: 1.5;
-  margin-block-end: 0.5em;
+  margin-block-end: 3rem;
 }
 
 .books__addbook-form {
@@ -165,16 +228,75 @@ body {
   box-shadow: none;
 }
 
-.show-books,
-.add-books,
-.contact {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding: 2rem;
-	gap: 2rem;
+.books__addbook-success {
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-block: 1rem;
+  color: green;
+  animation: blink 1s linear infinite;
 }
 
-.hide {
-	display: none;
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* contact section styles
+------------------------------------ */
+.books__contact-title {
+  text-align: center;
+  font-size: 30px;
+  line-height: 1.5;
+  margin-block-end: 3rem;
+}
+
+.books__contact-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 2rem;
+  font-size: 18px;
+  line-height: 1.5;
+  max-inline-size: 520px;
+  margin-inline: auto;
+}
+
+.books__contact-details-info {
+  list-style: unset;
+  list-style-position: outside;
+  margin-inline: 2rem;
+}
+
+.books__contact-details-info > * {
+  padding-inline-start: 1.5rem;
+}
+
+/* footer section styles
+------------------------------------ */
+.footer {
+  border: 4px solid #000;
+  padding: 0.5rem 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+  /* header section styles
+  ------------------------------------ */
+  .header__wrapper > * {
+    flex: 1;
+  }
+
+  .header__logo {
+    border: none;
+    text-align: left;
+  }
 }
