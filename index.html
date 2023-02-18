@@ -16,7 +16,19 @@
   <div class="container">
 
     <!-- ***********************  PAGE HEADER *********************** -->
-    <!-- <header class="header"></header> -->
+    <header class="header">
+			<div class="header__wrapper">
+				<span class="header__logo">Awesome Books</span>
+				<nav class="header__nav">
+					<ul class="header__nav-list">
+						<li class="header__nav-item active">List</li>
+						<li class="header__nav-item" data-nav="add">Add new</li>
+						<li class="header__nav-item" data-nav="contact">Contact</li>
+					</ul>
+				</nav>
+			</div>
+			<span class="header__date"></span>
+		</header>
 
     <!-- ***********************  PAGE MAIN *********************** -->
     <main class="main">
@@ -32,31 +44,13 @@
 				<div class="books__list"></div>
 			
 			</section>
-
-			<!--Add book section-->
-			<section class="books__addbook">
-			
-				<h2 class="books__addbook-title">Add a new book</h2>
-			
-				<form action="#" class="books__addbook-form">
-			
-					<label class="books__addbook-label" for='title'>
-						<input type="text" name='title' id='title' placeholder='Title' required>
-					</label>
-			
-					<label class="books__addbook-label">
-						<input type="text" name='author' id='author' placeholder='Author' required>
-					</label>
-			
-					<input type="submit" value="Add" data-input='submit'>
-				</form>
-			</section>
-
 		</div>
     </main>
 
     <!-- ***********************  PAGE FOOTER *********************** -->
-    <footer class="footer"></footer>
+    <footer class="footer">
+			<p class="footer__note">Copyright</p>
+		</footer>
 
   </div>
 
