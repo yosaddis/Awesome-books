@@ -65,7 +65,13 @@ In this project, we built a basic website that allows users to add/remove books 
 
 <h3 align="center">Screenhot</h3>
 <p align="center">
-  <img width="200" src="screenshots/demo.png">
+  <img width="200" src="screenshots/list.png">
+</P>
+<p align="center">
+  <img width="200" src="screenshots/form.png">
+</P>
+<p align="center">
+  <img width="200" src="screenshots/contact.png">
 </P>
 
 ## 💻 Getting Started <a name="getting-started"></a>
