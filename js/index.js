@@ -171,6 +171,32 @@ const displayContact = () => {
 	booksContainer.insertAdjacentHTML('afterbegin', contactHtml);
 };
 
+// create a books page display function
+const displayBooks = () => {
+	const booksContainer = document.querySelector('.books');
+
+	const booklistHtml = `
+  <section class="books__collection">
+    <h1 class="books__collection-title">All awesome books</h1>
+    <div class="books__list"></div>
+  </section>
+  `;
+
+	booksContainer.innerHTML = '';
+	booksContainer.insertAdjacentHTML('afterbegin', booklistHtml);
+};
+
+// render  books on the page when page loads
+window.addEventListener('DOMContentLoaded', () => {
+	// create a new instance of the Books class
+	const books = new Books();
+
+	// call the renderBooks method from books class when the page loads
+	books.renderBooks();
+});
+
+
+
 // add event listener to the page
 document.addEventListener('click', (e) => {
 	if (e.target.classList.contains('header__nav-item')) {
